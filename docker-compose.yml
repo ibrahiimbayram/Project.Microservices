@@ -1,0 +1,64 @@
+version: '3.4'
+
+services:
+  sqldb:
+    image: "mcr.microsoft.com/mssql/server"
+    container_name: sqldb
+    environment:
+        SA_PASSWORD: "secret123new!"
+        ACCEPT_EULA: "Y"
+        TRUSTED_CONNECTION: "TRUE" 
+    ports:
+      - "1433:1433"
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+  services.order: 
+    image: services.order
+    container_name: order 
+    build:
+      context: ./services.order
+      dockerfile:  Dockerfile
+    ports:
+      - "6000:6000"
+    depends_on:
+      - sqldb
+  services.product: 
+    image: services.product
+    container_name: product 
+    build:
+      context: ./services.product
+      dockerfile:  Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - sqldb
+  job.consumer.api: 
+    image: job.consumer.api
+    container_name: job.consumer.api
+    restart: on-failure
+    build:
+      context: ./Job.Consumer.Api
+      dockerfile:  Dockerfile
+    ports:
+      - "4000:4000"
+    depends_on:
+      - sqldb
+  job.producer:
+    image: job.producer
+    container_name: job.producer
+    command: mkdir /root/essai/
+    tty: true
+    build:
+      context: .
+      dockerfile: Job.Producer/Dockerfile

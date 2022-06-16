@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Job.Producer": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
