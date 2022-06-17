@@ -57,13 +57,13 @@ select * from Order
 
 ![image](https://user-images.githubusercontent.com/47785669/174255939-e8dc200c-547b-499a-92f6-208fe9d1bbe1.png)
 
-Job.Producer = Product ve Order tablolarına veri akışını sağlar.
+* Job.Producer = Product ve Order tablolarına veri akışını sağlar.
 
-Job.Consumer.Api = Db'de migration oluşturur.Kafkayı dinler.
+* Job.Consumer.Api = Db'de migration oluşturur.Kafkayı dinler.
 
-Services.Order = Sipariş servisi crud işlemlerini ve Kafkaya veri akışını sağlar.
+* Services.Order = Sipariş servisi crud işlemlerini ve Kafkaya veri akışını sağlar.
 
-Services.Product = Ürün servisi crud işlemlerini sağlar.
+* Services.Product = Ürün servisi crud işlemlerini sağlar.
 
 # Geliştirilmesi gereken noktalar
 
