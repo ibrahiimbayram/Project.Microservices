@@ -69,5 +69,5 @@ select * from Order
 
 * Memory Cache eklenebilir.
 
-* Integration ve Unit Testleri yazılabilir.
+* Integration ve Unit Testleri eklenebilir.
 
