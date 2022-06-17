@@ -67,4 +67,7 @@ select * from Order
 
 # Geliştirilmesi gereken noktalar
 
-Memory Cache eklenebilir.
+* Memory Cache eklenebilir.
+
+* Integration ve Unit Testleri yazılabilir.
+
