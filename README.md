@@ -4,6 +4,7 @@ Microservices mimarisi ile geliştirmiş olduğum projede Docker ve Kafka teknol
 Order ve Product servisler geliştirildi.
 Proje servislerin kafka üzerinden haberleşmesi ve ürün adet miktarının güncel kalmasını sağlamayı amaçlamaktadır.
 
+Özetle Mimari yapı bu şekildedir.
 
 ![image](https://user-images.githubusercontent.com/47785669/174316822-3232d67b-ae7c-4109-b20e-c12303ae8d41.png)
 
