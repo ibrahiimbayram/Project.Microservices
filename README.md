@@ -5,6 +5,10 @@ Order ve Product servisler geliştirildi.
 Proje servislerin kafka üzerinden haberleşmesi ve ürün adet miktarının güncel kalmasını sağlamayı amaçlamaktadır.
 
 
+![image](https://user-images.githubusercontent.com/47785669/174316822-3232d67b-ae7c-4109-b20e-c12303ae8d41.png)
+
+
+
 # Kurulum
 
 1. `Docker Desktop`'ı yükleyin .
